@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GoalAmountMenuController">
+   <children>
+      <VBox alignment="CENTER" layoutX="140.0" layoutY="44.0" prefHeight="400.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Savings Amount:">
+               <font>
+                  <Font name="Futura-Medium" size="41.0" />
+               </font>
+            </Label>
+            <TextField fx:id="AmountField" alignment="CENTER" editable="false" maxWidth="-Infinity" prefHeight="61.0" prefWidth="245.0" text="\$">
+               <font>
+                  <Font name="Futura-Medium" size="32.0" />
+               </font>
+            </TextField>
+            <GridPane maxWidth="-Infinity" prefHeight="139.0" prefWidth="187.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="34.33331298828125" minHeight="10.0" prefHeight="33.666656494140625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="36.333343505859375" minHeight="10.0" prefHeight="36.333343505859375" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button2" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button3" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button5" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button6" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button8" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button9" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#backspace" text="Back" textAlignment="CENTER" textFill="RED" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button0" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openProgressMenu" text="Next" textAlignment="CENTER" textFill="#00bc06" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <font>
+                        <Font name="Futura-Medium" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

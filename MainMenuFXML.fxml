@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="190.0" pickOnBounds="true" preserveRatio="true" />
+            <VBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" text="Sproutly" textFill="#006842">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="75.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" text="Plant a seed for a better future">
+                     <font>
+                        <Font name="Harlow Solid Italic" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label fx:id="MainMenuButton" alignment="CENTER" onMouseClicked="#OpenReasonMenu" text="Start" textFill="#04c780">
+               <font>
+                  <Font name="Futura-Medium" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
