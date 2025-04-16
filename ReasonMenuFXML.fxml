@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SproutlyController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SproutlyController">
    <children>
       <HBox alignment="TOP_CENTER" layoutX="7.0" layoutY="29.0" prefHeight="400.0" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -45,7 +45,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="CarButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Car" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="carButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Car" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -53,7 +53,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="TripButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Trip" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="tripButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Trip" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -61,7 +61,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="RetirementButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Retirement" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="retirementButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Retirement" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -69,7 +69,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="SchoolButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="School" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="schoolButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="School" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -77,7 +77,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="EmergenciesButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Emergencies" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="emergenciesButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Emergencies" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -85,7 +85,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="BillsButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Bills" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="billsButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Bills" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -93,7 +93,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="HomeButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Home" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="homeButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#setGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Home" textAlignment="CENTER" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>
@@ -101,7 +101,7 @@
                               <DropShadow />
                            </effect>
                         </Button>
-                        <Button fx:id="OtherButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#otherGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Other" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                        <Button fx:id="otherButton" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#otherGoal" prefHeight="35.0" prefWidth="125.0" style="-fx-background-radius: 20;; -fx-border-radius: 20;;" text="Other" textAlignment="CENTER" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                            <font>
                               <Font name="Futura-Medium" size="18.0" />
                            </font>

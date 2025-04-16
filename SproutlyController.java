@@ -10,8 +10,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.swing.*;
 
 public class SproutlyController {
+   //Model
+   private SproutlyModel model = new SproutlyModel();
    
    // Main Menu
    @FXML
@@ -25,13 +28,13 @@ public class SproutlyController {
    @FXML
    private TextField loginPasswordField;
    @FXML
-   private TextField loginUsernameFiield;
+   private TextField loginUsernameField;
    
    // Create Account Menu
    @FXML
    private Button createAccountButton;
    @FXML
-   private TextField createAccountPasswordButton;
+   private TextField createAccountPasswordField;
    @FXML
    private TextField createAccountUsernameField;
    @FXML
@@ -39,27 +42,29 @@ public class SproutlyController {
    
    // Reason Menu
    @FXML
-   private Button BillsButton;
+   private Button billsButton;
    @FXML
-   private Button CarButton;
+   private Button carButton;
    @FXML
-   private Button EmergenciesButton;
+   private Button emergenciesButton;
    @FXML
-   private Button HomeButton;
+   private Button homeButton;
    @FXML
-   private Button OtherButton;
+   private Button otherButton;
    @FXML
-   private Button RetirementButton;
+   private Button retirementButton;
    @FXML
-   private Button SchoolButton;
+   private Button schoolButton;
    @FXML
-   private Button TripButton;
+   private Button tripButton;
    
    // Goal Amount Menu
    @FXML
-   private TextField AmountField;
+   private TextField amountField;
    @FXML
    private Button backButton;
+   @FXML
+   private Button backspaceButton;
    @FXML
    private Button button0;
    @FXML
@@ -81,7 +86,7 @@ public class SproutlyController {
    @FXML
    private Button button9;
    @FXML
-   private Button nextButton;
+   private Button enterButton;
    
    // Progress Menu
    @FXML
@@ -98,30 +103,33 @@ public class SproutlyController {
    // Methods
    @FXML
    void openProgressMenu(ActionEvent event) throws Exception {
-      FXMLLoader loader = new FXMLLoader();
-      loader.setLocation(getClass().getResource("ProgressMenuFXML.fxml"));
-      Parent parent = loader.load();
-      Scene scene = new Scene(parent);
-      Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-      window.setScene(scene);
-      window.show();
+      openMenu("ProgressMenuFXML.fxml", event);
    }
    
    @FXML
-   void OpenReasonMenu(ActionEvent event) throws Exception {
-      FXMLLoader loader = new FXMLLoader();
-      loader.setLocation(getClass().getResource("ReasonMenuFXML.fxml"));
-      Parent parent = loader.load();
-      Scene scene = new Scene(parent);
-      Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-      window.setScene(scene);
-      window.show();
+   void openReasonMenu(ActionEvent event) throws Exception {
+      openMenu("ReasonMenuFXML.fxml", event);
    }
    
    @FXML
    void openGoalAmountMenu(ActionEvent event) throws Exception {
+      openMenu("GoalAmountMenuFXML.fxml", event);
+   }
+   
+   @FXML
+   void openLoginMenu(ActionEvent event) throws Exception {
+      openMenu("LoginMenuFXML.fxml", event);
+   }
+
+   @FXML
+   void openCreateAccountMenu(ActionEvent event) throws Exception{
+      openMenu("CreateAccountMenuFXML.fxml", event);
+   }
+   
+   @FXML
+   void openMenu(String fxml, ActionEvent event) throws Exception{
       FXMLLoader loader = new FXMLLoader();
-      loader.setLocation(getClass().getResource("GoalAmountMenuFXML.fxml"));
+      loader.setLocation(getClass().getResource(fxml));
       Parent parent = loader.load();
       Scene scene = new Scene(parent);
       Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -130,51 +138,41 @@ public class SproutlyController {
    }
    
    @FXML
-   void OpenLoginMenu(ActionEvent event) throws Exception {
-      FXMLLoader loader = new FXMLLoader();
-      loader.setLocation(getClass().getResource("LoginMenuFXML.fxml"));
-      Parent parent = loader.load();
-      Scene scene = new Scene(parent);
-      Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-      window.setScene(scene);
-      window.show();
-   }
-
-   @FXML
-   void OpenCreateAccountMenu(ActionEvent event) throws Exception {
-      FXMLLoader loader = new FXMLLoader();
-      loader.setLocation(getClass().getResource("CreateAccountMenuFXML.fxml"));
-      Parent parent = loader.load();
-      Scene scene = new Scene(parent);
-      Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-      window.setScene(scene);
-      window.show();
+   void otherGoal(ActionEvent event) throws Exception{
+      model.setGoal(JOptionPane.showInputDialog(null,"Input your desired goal:"));
+      openGoalAmountMenu(event);
    }
    
    @FXML
-   void otherGoal(ActionEvent event) {
-
+   void setGoal(ActionEvent event) throws Exception{
+      model.setGoal(((Button)event.getSource()).getText());
+      openGoalAmountMenu(event);
    }
    
    @FXML
-   void setGoal(ActionEvent event) {
-
-   }
-   
-   @FXML
-   void login(ActionEvent event) {
-      
-      OpenProgressMenu(event);
+   void updateAmountField(ActionEvent event){
+      amountField.setText(amountField.getText() + ((Button)event.getSource()).getText());
    }
    
    @FXML
    void backspace(ActionEvent event) {
-
+      amountField.setText(amountField.getText().substring(0,amountField.getText().length()-1));
    }
-      
-   @FXML
-   void createAccount(ActionEvent event) {
    
-      OpenReasonMenu(event);
+   @FXML
+   void login(ActionEvent event) throws Exception{
+      model.setUsername(loginUsernameField.getText());
+      if(loginPasswordField.getText().equals(model.getPassword(model.getUsername()))){
+         openProgressMenu(event);
+      }else{
+         loginPasswordField.setText("INCORRECT PASSWORD");
+      }
+   }
+   
+   @FXML
+   void createAccount(ActionEvent event) throws Exception{
+      model.setUsername(createAccountUsernameField.getText());
+      model.setPassword(createAccountPasswordField.getText());
+      openReasonMenu(event);
    }
 }

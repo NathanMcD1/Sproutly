@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SproutlyController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SproutlyController">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -27,7 +27,7 @@
                   </Label>
                </children>
             </VBox>
-            <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#OpenLoginMenu" text="Start" textFill="#01942d">
+            <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#openLoginMenu" text="Start" textFill="#01942d">
                <font>
                   <Font name="System Bold Italic" size="25.0" />
                </font>
