@@ -90,7 +90,7 @@ public class SproutlyController {
    
    // Progress Menu
    @FXML
-   private Label goalField;
+   private Label goalLabel;
    @FXML
    private Label percentField;
    @FXML
@@ -103,7 +103,17 @@ public class SproutlyController {
    // Methods
    @FXML
    void openProgressMenu(ActionEvent event) throws Exception {
-      openMenu("ProgressMenuFXML.fxml", event);
+      SproutlyModel tempModel = this.model;
+      FXMLLoader loader = new FXMLLoader();
+      loader.setLocation(getClass().getResource("ProgressMenuFXML.fxml"));
+      Parent parent = loader.load();
+      SproutlyController progressCtrl = loader.getController();
+      Scene scene = new Scene(parent);
+      Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+      window.setScene(scene);
+      window.show();
+      progressCtrl.setModel(tempModel);
+      progressCtrl.goalLabel.setText(this.model.getGoal());
    }
    
    @FXML
@@ -174,5 +184,10 @@ public class SproutlyController {
       model.setUsername(createAccountUsernameField.getText());
       model.setPassword(createAccountPasswordField.getText());
       openReasonMenu(event);
+   }
+   
+   @FXML
+   void setModel(SproutlyModel model){
+      this.model = model;
    }
 }

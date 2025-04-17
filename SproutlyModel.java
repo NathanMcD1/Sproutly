@@ -24,27 +24,27 @@ public class SproutlyModel{
       this.password = password;
    }
    public String getPassword(String username){
-     return password;
+      return password;
    }
    
    public void setGoal(String goal){
       this.goal = goal;
    }
    public String getGoal(){
-     return goal;
+      return goal;
    }
    
    public void setGoalTarget(int goalTarget){
       this.goalTarget = goalTarget;
    }
    public int getGoalTarget(){
-     return goalTarget;
+      return goalTarget;
    }
    
    public void setGoalCurrent(int goalCurrent){
       this.goalCurrent = goalCurrent;
    }
    public int getGoalCurrent(){
-     return goalCurrent;
+      return goalCurrent;
    }
 }
