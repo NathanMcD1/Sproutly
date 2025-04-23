@@ -10,15 +10,15 @@ public class LoginMenuController implements UserAware {
     private Account user;
 
     @FXML private TextField loginUsernameField;
-    @FXML private TextField loginPasswordField;
+    @FXML private PasswordField loginPasswordField;
     @FXML private Button loginButton;
     @FXML private Hyperlink createAccountLink;
 
     @FXML
     void login(ActionEvent event) throws Exception {
         user.setUsername(loginUsernameField.getText());
-
-        if (loginPasswordField.getText().equals(user.getPassword(user.getUsername()))) {
+        user.setAccount();
+        if (loginPasswordField.getText().equals(user.getPassword()) && !user.getIsNew()) {
             Sproutly.openMenu("ProgressMenuFXML.fxml");
         } else {
             loginPasswordField.setText("INCORRECT PASSWORD");

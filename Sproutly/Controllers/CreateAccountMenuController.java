@@ -7,27 +7,29 @@ import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
 public class CreateAccountMenuController implements UserAware {
-    private Account user;
+   private Account user;
 
-    @FXML private TextField createAccountUsernameField;
-    @FXML private TextField createAccountPasswordField;
-    @FXML private Button createAccountButton;
-    @FXML private Hyperlink loginLink;
+   @FXML private TextField createAccountUsernameField;
+   @FXML private PasswordField createAccountPasswordField;
+   @FXML private Button createAccountButton;
+   @FXML private Hyperlink loginLink;
 
-    @FXML
+   @FXML
     void createAccount(ActionEvent event) throws Exception {
-        user.setUsername(createAccountUsernameField.getText());
-        user.setPassword(createAccountPasswordField.getText());
-        Sproutly.openMenu("ReasonMenuFXML.fxml");
-    }
+      if(createAccountUsernameField.getText() != ""){
+         user.setUsername(createAccountUsernameField.getText());
+         user.setPassword(createAccountPasswordField.getText());
+         Sproutly.openMenu("ReasonMenuFXML.fxml");
+      }
+   }
 
-    @FXML
+   @FXML
     void openLoginMenu(ActionEvent event) throws Exception {
-        Sproutly.openMenu("LoginMenuFXML.fxml");
-    }
+      Sproutly.openMenu("LoginMenuFXML.fxml");
+   }
 
-    @Override
+   @Override
     public void setUser(Account user) {
-        this.user = user;
-    }
+      this.user = user;
+   }
 }

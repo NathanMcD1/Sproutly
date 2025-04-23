@@ -30,10 +30,20 @@ public class GoalAmountMenuController implements UserAware {
 
     @FXML
     void openProgressMenu(ActionEvent event) throws Exception {
-      if(!user.getIsNew()){
-         user.setGoalCurrent(user.getGoalCurrent() + Integer.parseInt(amountField.getText()));
-      }else{
-         user.setGoalTarget(Integer.parseInt(amountField.getText()));
+      if(amountField.getText().equals("")){
+         amountField.setText("0");
+      }
+      if(event.getSource() != backButton){
+         if(!user.getIsNew()){
+               user.setGoalCurrent(user.getGoalCurrent() + Integer.parseInt(amountField.getText()));
+         }else{
+            if(user.getUpdate()){
+               user.setGoalCurrent(Integer.parseInt(amountField.getText()));
+               user.setUpdate(false);
+            }else{
+               user.setGoalTarget(Integer.parseInt(amountField.getText()));
+            }
+         }
       }
       Sproutly.openMenu("ProgressMenuFXML.fxml");
     }
