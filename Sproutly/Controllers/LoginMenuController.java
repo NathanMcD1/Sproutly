@@ -21,7 +21,7 @@ public class LoginMenuController implements UserAware {
         if (loginPasswordField.getText().equals(user.getPassword()) && !user.getIsNew()) {
             Sproutly.openMenu("ProgressMenuFXML.fxml");
         } else {
-            loginPasswordField.setText("INCORRECT PASSWORD");
+            loginPasswordField.setText("");
         }
     }
 
