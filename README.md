@@ -8,11 +8,11 @@ Sproutly is a simple Java desktop app that helps you save money. It shows your p
 - Keep your data on your computer.
 
 ## What you need
-- Java 11 or newer
-- A Java IDE (like IntelliJ or Eclipse)
+- Java 11+
+- A Java IDE
 - JavaFX SDK in your IDE
   - Get it: https://gluonhq.com/products/javafx/
-- SQLite JDBC file in your IDE
+- SQLite JDBC .jar file in your IDE
   - Get it: https://github.com/xerial/sqlite-jdbc/releases
 
 ## Notes
