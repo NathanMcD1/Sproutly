@@ -6,6 +6,10 @@ import javafx.event.ActionEvent;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
+/**
+ * Allows users to enter a savings amount. Updates goal or progress depending on state.
+ */
+
 public class GoalAmountMenuController implements UserAware {
     private Account user;
       
