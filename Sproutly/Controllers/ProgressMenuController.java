@@ -8,6 +8,10 @@ import javafx.scene.image.ImageView;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
+/**
+ * Displays the user's progress toward their savings goal using a plant-growth theme.
+ */
+
 public class ProgressMenuController implements UserAware {
    private Account user;
 
