@@ -11,6 +11,11 @@ import java.sql.Statement;
 import Sproutly.Models.Account;
 import Sproutly.Controllers.UserAware;
 
+/**
+ * The main application launcher for Sproutly.
+ * Initializes the JavaFX UI, loads scenes, and manages user state.
+ */
+
 public class Sproutly extends Application {
    private static Stage stage;
    private static Account user = new Account();
