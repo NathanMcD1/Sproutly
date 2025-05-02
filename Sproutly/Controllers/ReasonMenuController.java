@@ -7,8 +7,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
-
 import javax.swing.*;
+
+/**
+ * Lets users choose or input a savings goal (like car, school, trip, etc.).
+ */
 
 public class ReasonMenuController implements UserAware {
     private Account user;
