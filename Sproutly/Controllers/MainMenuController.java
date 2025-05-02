@@ -8,6 +8,10 @@ import javafx.scene.image.ImageView;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
+/**
+ * Controls the main menu screen. Offers navigation to login.
+ */
+
 public class MainMenuController implements UserAware {
     private Account user;
 
