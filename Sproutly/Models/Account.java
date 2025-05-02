@@ -2,6 +2,11 @@ package Sproutly.Models;
 
 import java.sql.*;
 
+/**
+ * Represents a user account, including credentials and savings progress.
+ * Holds the variables used throughout the app.
+ */
+
 public class Account{
    private String username;
    private String password;
