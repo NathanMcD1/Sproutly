@@ -10,6 +10,10 @@ import javax.swing.*;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
+/**
+ * Provides account options like viewing current progress, changing goals, or deleting the account.
+ */
+
 public class AccountMenuController implements UserAware {
    private Account user;
 
