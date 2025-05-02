@@ -6,6 +6,10 @@ import javafx.event.ActionEvent;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
+/**
+ * Handles user login functionality and navigation to progress menu or the create account menu.
+ */
+
 public class LoginMenuController implements UserAware {
     private Account user;
 
