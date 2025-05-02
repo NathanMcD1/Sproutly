@@ -6,6 +6,11 @@ import javafx.event.ActionEvent;
 import Sproutly.Sproutly;
 import Sproutly.Models.Account;
 
+/**
+ * Manages the create account scene where users can create new accounts.
+ * Captures and stores usernames and passwords.
+ */
+
 public class CreateAccountMenuController implements UserAware {
    private Account user;
 
